@@ -1,4 +1,14 @@
 {
   "stocks": ["AAPL"],
-  "interval": "5min"
+  "interval": "5min",
+  "metadata": {
+    "AAPL": {
+      "sector": "technology",
+      "asset_class": "equity"
+    },
+    "BTC": {
+      "sector": "cryptocurrency",
+      "asset_class": "crypto"
+    }
+  }
 }

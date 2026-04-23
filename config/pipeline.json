@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "name": "alpha_vantage_price",
+      "processor": "alpha_vantage",
+      "queue_url": "https://sqs.eu-west-1.amazonaws.com/834922934600/team01-price-data-queue",
+      "enabled": true,
+      "description": "Alpha Vantage GLOBAL_QUOTE: price (target) + volume (related)"
+    }
+  ],
+  "s3": {
+    "bucket": "team01-ccbda-bucket",
+    "target_prefix": "forecast-ready/target",
+    "related_prefix": "forecast-ready/related",
+    "metadata_prefix": "forecast-ready/metadata"
+  },
+  "glue": {
+    "lookback_hours": 2,
+    "max_sqs_messages": 500
+  }
+}
